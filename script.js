@@ -9,7 +9,11 @@ const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
+const scores = [0,0];
+
 let currentScore = 0;
+let activePlayer = 0;
+
 
 elementScore0.textContent = 0;
 elementScore1.textContent = 0;
@@ -25,9 +29,10 @@ btnRoll.addEventListener("click", function() {
 
     if (dice !==1 ) {
         currentScore += dice;
-        elementCurrent0.textContent = currentScore;
+        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
     } else {
 
+        activePlayer = activePlayer === 0 ? 1 : 0;
     }
 
 
