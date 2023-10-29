@@ -35,7 +35,4 @@ btnRoll.addEventListener("click", function() {
         activePlayer = activePlayer === 0 ? 1 : 0;
     }
 
-
-
-
 })
